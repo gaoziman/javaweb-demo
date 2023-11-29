@@ -1,8 +1,18 @@
-package dao;/**
+package dao;
+
+import domain.User;
+
+/**
  * @author : Leo
- * @date  2023-11-28 20:59
  * @version 1.0
+ * @date 2023-11-28 20:59
  * @description :
  */
-public class UserDao {
+public interface UserDao {
+
+    // 登录
+    User login(String username, String password);
+
+    // 注册
+    Boolean register(User user);
 }

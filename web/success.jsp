@@ -1,4 +1,4 @@
-<%--
+<%@ page import="domain.User" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2023/11/28
@@ -7,10 +7,22 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>登录成功</title>
+</head>
+<body>
+<h1>登录成功！</h1>
+<br>
+<font color="red">
+    <%
+        User user = (User)request.getAttribute("user");
+        String username = user.getUsername();
+    %>
+    欢迎您：
+    <%
+        out.print(username);
+    %>
+</font>
+
+</body>
 </html>

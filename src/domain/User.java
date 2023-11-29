@@ -1,4 +1,4 @@
-package dao;
+package domain;
 
 /**
  * @author : Leo
@@ -15,16 +15,28 @@ public class User {
 
     private int age;
 
+    private String phone;
 
-    public User() {
-    }
 
-    public User(int id, String username, String password, int age) {
+    public User(int id, String username, String password, int age, String phone) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.age = age;
+        this.phone = phone;
     }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public User() {
+    }
+
 
     public int getId() {
         return id;
@@ -65,6 +77,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", age=" + age +
+                ", phone='" + phone + '\'' +
                 '}';
     }
 }
